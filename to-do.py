@@ -3,33 +3,45 @@
 # standard Python module 
 import sys
 
-# initialize empty list for to do list
+# initialize empty list in Python to do list 
 to_do_list = []
 
-# initialize empty list for marked tasks
+# initialize empty list for marked tasks or completed tasks
 marked_tasks_list = []
 
 # function to add a task
 def add_task():
     task_choice = input("1) 'Add Task' chosen.\nType new task here:  ").casefold()              
-    # use append to add "task_choice" in to_do_list
-    to_do_list.append(task_choice)                                                              
+    # casefold() is used to convert the input to lowercase, ensuring consistency
+    # use append to add "task_choice" in to_do_list and a way to add an element to the end of a list.
+    to_do_list.append(task_choice) 
+
+    # prints a confirmation message, indicating that the task has been successfully added. 
+    # It also displays the updated to-do list by printing the contents of the to_do_list.                                                             
     print("Successfully task added.\nTo do list updated:", to_do_list)
 
 # function to remove a task
 def remove_task():
+    # prints a message indicating that the user has chosen to remove a task and displays the current to-do list using to_do_list.
     print("2) 'Remove task' chosen. This is your current list:", to_do_list)
-    erease_input = input("Type the task to remove here:  ").casefold()                                     
 
-    # check if user input available in to_do_list
-    if erease_input in to_do_list:                                                              
-        to_do_list.remove(erease_input)                                                        
-        print(f'{erease_input} successfully removed. To do list updated:', to_do_list)
+    # asks the user to enter the task they want to remove
+    erase_input = input("Type the task to remove here:  ").casefold()                                     
 
+    # checks if user input is available in to_do_list
+    # If the entered task is found in the to-do list, this line removes it using the remove() method of the list
+    # If the task was found and successfully removed, a confirmation message is printed along with the updated to-do list.
+    # If the task is not found in the to-do list, an error message is printed, instructing the user to choose tasks that are available in the to-do list.
+    if erase_input in to_do_list:                                                              
+        to_do_list.remove(erase_input)                                                        
+        print(f'{erase_input} successfully removed. To do list updated:', to_do_list)
     else:                                                                                     
-        print(f'{erease_input} not found. Choose tasks available in the to do list.')
+        print(f'{erase_input} not found. Choose tasks available in the to do list.')
 
 # function to View 2 different lists
+# prints a message indicating that the user has chosen to view the task lists. 
+# then displays the current to-do list using to_do_list.
+# displays the list of finished tasks
 def view_task():
     print(f'3) View task list chosen.\n Current to do list:', to_do_list)
     print(f' This is the finished tasks list:', marked_tasks_list)
