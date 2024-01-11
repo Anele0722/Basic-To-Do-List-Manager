@@ -7,10 +7,11 @@ This project is a basic To-Do List application implemented in Python. It allows 
 
 ## Features
 
-- Add tasks to the to-do list
-- Remove tasks from the to-do list
-- View the current to-do list
-- Mark tasks as completed and move them to the finished tasks list
-- Simple and easy-to-use command-line interface
+- Add tasks to the to-do list: the user can input descriptions and add them to the to-do list.
+- Remove tasks from the to-do list: selects a task and removes it from the to-do list.
+- View the current to-do list: displays the whole to-do list and finished tasks.
+- Update tasks: Mark tasks as completed and move them to the finished tasks list.
+- Exit Program function - uses sys module to provide access to the exit() function.
+  
 
  
