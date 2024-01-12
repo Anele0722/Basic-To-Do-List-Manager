@@ -94,9 +94,10 @@ while True:
     # The entered choice is stored in the variable task_choice.
     task_choice = input("Choose the number of task:   ")
 
-  try: 
+   
     # convert the user's input (which is initially a string) into an integer using the int() function. 
     # This is done because the menu options are represented as numbers, and the program needs to determine which action the user has chosen based on this integer.
+      try:
         task_choice = int(task_choice)
       
 # If the conversion to an integer is successful, check whether the user's choice is equal to 1, 
